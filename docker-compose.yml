@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  db:
+    build:
+      context: ./db
+    ports: 
+      - '5432:5432'
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: postgres
+    volumes:
+      - ./db/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
