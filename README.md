@@ -11,20 +11,29 @@
 
 ## 使い方
 
-### ビルド方法
+### DB のビルド
 
 ```term
 docker-composed build
 ```
 
-### 起動方法
+### DB の起動
 
 ```term
 docker-composed up -d
 ```
 
-### 終了方法
+### DB の終了
 
 ```term
 docker-composed down
+```
+
+### サンプルアプリの起動
+
+DB が起動している状態で。
+
+```term
+cd app
+cargo run
 ```
